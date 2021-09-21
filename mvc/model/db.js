@@ -5,6 +5,7 @@ const db = mongoose.connect(process.env.MONGO_URL)
 .catch((err) => console.log(err));
 
 const schema = ({
+    _id: mongoose.Schema.Types.ObjectId,
     name: String, 
     age: Number,
     occupation: String, 

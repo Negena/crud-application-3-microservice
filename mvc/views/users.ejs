@@ -1,0 +1,14 @@
+<%- include("./partials/header.ejs") %>
+
+
+    <h3>hello</h3>
+    <div class="users">
+        <ul class="list-users">
+            <% for (let i of data){ %> 
+                <li class="user-li">
+                     <h2 class="name"><a href="/user/<%=i._id %>"><%= i.name %></a></h2>
+                </li>  
+         <% } %>   
+        </ul>
+    </div>
+<%- include("./partials/footer.ejs") %>

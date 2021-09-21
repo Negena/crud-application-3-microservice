@@ -1,0 +1,14 @@
+<%- include("./partials/header.ejs") %>
+
+
+    <h3>hello</h3>
+    <div class="user">
+    
+       <a href="/upd/<%=data._id %>"><i class="fa fa-pencil"></i></a>
+            <h2 class="name"><a href="/user/<%=data._id %>"><%= data.name %></a></h2>
+            <h3 class="age" ><%= data.age %></h3>
+            <h3 class="occupation"><%= data.occupation %></h3>
+            <h4 class="about"><%= data.about %></h4>
+          <a href="/del/<%=data._id %>"><i class="fa fa-trash"></i></a></li>  
+    </div>
+<%- include("./partials/footer.ejs") %>

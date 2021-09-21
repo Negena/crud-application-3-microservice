@@ -1,0 +1,13 @@
+<%- include("./partials/header.ejs") %>
+<h3>hello</h3>
+<div class="upd-user">
+    
+<form action="/upda/<%=data._id %>" method="post">
+    <label for="name"><input type="text" name="name" placeholder="name" value="<%=data.name %>"></label>
+    <label for="age"><input type="number" name="age" placeholder="age" value="<%=data.age %>"></label>
+    <label for="occupation"><input type="text" name="occupation" placeholder="occupation" value="<%=data.occupation %>"></label>
+    <label for="about"><textarea type="text" rows="8" cols="60" name="about" placeholder="about"><%=data.about %>"</textarea></label>
+    <button type="submit">send</button>  
+</form>
+</div>
+<%- include("./partials/footer.ejs") %>
