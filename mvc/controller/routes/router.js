@@ -8,6 +8,6 @@ router.get("/get", service.getUsers);
 router.get("/user/:id", service.getUser);
 router.get("/upd/:id", service.updateUser);
 router.post("/upda/:id",service.postUpdUser);
-// router.delete("/del/:id", service.deleteUser);
+router.get("/del/:id", service.deleteUser);
 
 module.exports = router;

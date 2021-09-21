@@ -14,7 +14,7 @@ db()
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.static("public"));
+app.use(express.static(__dirname +"/public"));
 app.set("views", path.join(__dirname + "/mvc/views/"));
 app.set("view engine", "ejs");
 

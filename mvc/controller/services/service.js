@@ -61,4 +61,11 @@ exports.postUpdUser = (req,res) => {
     User.findOneAndUpdate(query, data)
     .then(res.render("user", {data: data}))
     .catch(err => console.log(err))
+};
+
+exports.deleteUser = (req,res) => {
+    let id = req.params.id;
+    User.findByIdAndRemove(id)
+    .then(data => res.redirect('/get'))
+    .catch(err => console.log(err));
 }
