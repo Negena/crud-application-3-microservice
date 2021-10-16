@@ -18,9 +18,9 @@ exports.postUser = (req,res) => {
    }
    const user = new User ({
        _id : new mongoose.Types.ObjectId(),
-       name: req.body.name, 
-       age: req.body.age, 
-       occupation: req.body.occupation, 
+       name: req.body.name,
+       age: req.body.age,
+       occupation: req.body.occupation,
        about: req.body.about
    })
    user.save(user)
@@ -55,7 +55,7 @@ exports.postUpdUser = (req,res) => {
     data.name = req.body.name,
     data.age = req.body.age,
     data.about = req.body.about,
-    data.number = req.body.occupation
+    data.occupation = req.body.occupation
 
     let query = {_id : id}
     User.findOneAndUpdate(query, data)

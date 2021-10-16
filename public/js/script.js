@@ -1,7 +1,8 @@
 $(function(){
-    $.ajax({
-        type: "DELETE", 
-        url : "/del/:id", 
-        
-    })
+    $(".hide").on("click", toggleNav)
+
+    function toggleNav(){
+      $(".links").toggleClass("active");
+    }
+  
 })
